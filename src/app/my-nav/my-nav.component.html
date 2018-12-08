@@ -1,0 +1,42 @@
+ <!-- <app-sidebar></app-sidebar>  -->
+<style type="text/css">
+  .navcolor{
+background-color:#00264d;
+}
+
+</style>
+<mat-sidenav-container class="sidenav-container">
+  <nav>
+    <div class="nav-wrapper navcolor">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li> -->
+      </ul>
+    </div>
+  </nav>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)"> 
+    <!-- <mat-toolbar>Menu</mat-toolbar> -->
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/profile']">My Profile</a>
+      <a mat-list-item href="#">My Inbox</a>
+      <a mat-list-item href="#">My Output</a>
+      <a mat-list-item href="#">Message</a>
+      <a mat-list-item href="#">My Payment</a>
+      <a mat-list-item href="#">My Issue</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+  
+</mat-sidenav-container>

@@ -1,0 +1,53 @@
+ <style type="text/css">
+ 	div.sm-jumbotron{
+	margin:0px;
+	padding:.5rem;
+	background-color:#ffffff;
+	color:#000;
+}
+ </style>
+ <div class="row">
+ 	<div class="col s6 offset-s3">
+		<div class="card">
+			 <div class="sm-jumbotron center-align">
+			 	<img src="../assets/images/resume_icon.png" style="width: 80px;height: 70px">
+				<h3>Upload Resume</h3>
+				
+			</div>
+			<form [formGroup]="form" (submit)="onLoginSubmit()">
+	 <div class="row">
+					<div class="input-field col s12">
+						<input type="file" class="validation" name="UserName" required >
+						
+					</div>
+				</div>
+			
+
+				
+				<div class="row">
+					<div class="input-field col s12">
+						<button class="btn-large btn-submit" [disabled]="!userRegistrationForm.valid" type="submit">Upload</button>
+					</div>
+					
+				</div>
+				<!-- <div class="row">
+					<div class="col s12 center-align">
+						<a [routerLink]="['/login']" class="btn btn-link">Sign In</a>
+						 -->
+<!-- 						<a ng-href="./login/login">Sign In</a>
+ -->						
+  <!-- <a [routerLink]="['/login']" >Sign In</a> -->
+ 					<!-- </div>
+					
+				</div> -->
+			</form>  
+			
+		</div>  
+		
+
+	</div> 
+
+
+
+</div>  
+

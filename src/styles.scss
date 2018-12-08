@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+div.sm-jumbotron{
+	margin:0px;
+	padding:.5rem;
+	background-color:#00264d;
+	color:#fff;
+}
+button.btn-submit{
+	background-color:#00264d;
+	color:#fff;
+	width:100%;
+}
+div.validation-error{
+	color:red; 
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

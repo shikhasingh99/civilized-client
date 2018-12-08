@@ -1,0 +1,47 @@
+ <div class="row">
+ 	<div class="col s6 offset-s3">
+		<div class="card">
+			 <div class="sm-jumbotron center-align">
+				<h3>Sign In</h3>
+				
+			</div>
+			 <form [formGroup]="form" (submit)="onLoginSubmit()">
+	 <div class="row">
+					
+					<div class="input-field col s12">
+						<input type="email" class="validation" name="Email" required>
+						<label>Email</label>
+					</div>
+				</div>
+				  <div class="row">
+					<div class="input-field col s12">
+						
+						<input type="password" class="validation" name="Password" required>
+						<label>Password</label>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<a [routerLink]="['/home']" ><button class="btn-large btn-submit" [disabled]="!userRegistrationForm.valid" type="submit">Submit</button></a>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col s12 center-align">
+						
+						<a href="#">Sign Up</a>
+						
+					</div>
+					
+				</div>
+			</form>  
+			
+		</div>  
+		
+
+	</div> 
+
+
+
+</div>  
